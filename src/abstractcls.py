@@ -1,18 +1,18 @@
 #abstract class meant for inherited, abstractmethods are meant for overriden
 ##abs class can be use to like check like in this eg vehicle should able to go and stop so if only car etc class have both stop and go fx only then it will run or it will crash
 #we cant define fx in abs class
-from abc import ABC, abstractclassmethod # we are importing abstaract class and method from abc
+from abc import ABC, abstractmethod # we are importing abstaract class and method from abc
 
 
 
 class Vehical(ABC):
 
 
-    @abstractclassmethod
+    @abstractmethod
     def go(self) -> None:
         pass
 
-    @abstractclassmethod
+    @abstractmethod
     def stop(self) -> None:
         pass
 
