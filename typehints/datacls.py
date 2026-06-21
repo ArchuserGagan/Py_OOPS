@@ -14,6 +14,7 @@ class User:
 
 
 
+# dataclass doesnt verify at runtime
 
 
 def create_user(
