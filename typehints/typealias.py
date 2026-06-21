@@ -1,0 +1,22 @@
+
+type  User = dict[str, str | int | None]
+
+
+def create_user(
+        first_name:str,
+        last_name:str, 
+        age: int | None = None,
+)  -> User: #this is type alias
+    
+    email = f"{first_name.lower()}_{last_name.lower()}@example.com"
+    return {
+        "first_name" : first_name,
+        "last_name" : last_name,
+        "email" : email,
+        "age" : age,
+    }
+
+
+user1 = create_user("gagan", "singh", age=30)
+user2 = create_user("john", "doe")
+print(user1)
