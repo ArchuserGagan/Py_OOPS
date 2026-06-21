@@ -2,6 +2,8 @@ import random
 from typing import NewType, TypeVar  #Any for external dataset #typevar is for generics it is basically for ide  
 from dataclasses import dataclass
 
+#input should be generic and output should be specific
+
 RGB = NewType("RGB",tuple[int,int,int])
 HSL = NewType("HSL",tuple[int,int,int])
 
@@ -31,7 +33,7 @@ def create_user(
         email=email,
         fav_color=fav_color,
     )
-T = TypeVar("T")
+T = TypeVar("T")  # making it generic
 def random_choice(items:list[T]) -> T: # another way is just put [T] after func name 
     return random.choice(items)
 
